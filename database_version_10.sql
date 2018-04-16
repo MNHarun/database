@@ -9,6 +9,7 @@ CURRENCYID integer primary key
 , BASECONVRATE numeric
 , CURRENCY_SYMBOL TEXT COLLATE NOCASE NOT NULL UNIQUE
 , CURRENCY_TYPE TEXT /* Traditional, Crypto */
+, HISTORIC integer DEFAULT 0 /* 1 if no longer official */
 );
 
 INSERT INTO CURRENCYFORMATS_V1_NEW SELECT
